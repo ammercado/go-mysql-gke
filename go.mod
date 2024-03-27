@@ -1,4 +1,4 @@
-module github.com/JanaSabuj/music-api-k8s
+module github.com/ammercado/go-mysql-gke
 
 go 1.19
 
