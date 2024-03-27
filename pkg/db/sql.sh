@@ -5,9 +5,9 @@ create database crypto_db;
 use crypto_db;
 
 # insert into table songs
-INSERT INTO songs (created_at, updated_at, name, artist) VALUES (now(), now(), "Burn It Down", "Linkin Park");
-INSERT INTO songs (created_at, updated_at, name, artist) VALUES (now(), now(), "Earth Song", "Michael Jackson");
-INSERT INTO songs (created_at, updated_at, name, artist) VALUES (now(), now(), "Hey Jude", "The Beatles");
-INSERT INTO songs (created_at, updated_at, name, artist) VALUES (now(), now(), "Sound of Silence", "Simon and Garfunkel");
-INSERT INTO songs (created_at, updated_at, name, artist) VALUES (now(), now(), "Hotel California", "The Eagles");
-INSERT INTO songs (created_at, updated_at, name, artist) VALUES (now(), now(), "Comfortably Numb", "Pink Floyd");
+INSERT INTO coins (created_at, updated_at, name, abbreviation) VALUES (now(), now(), "Bitcoin", "BTC");
+INSERT INTO coins (created_at, updated_at, name, abbreviation) VALUES (now(), now(), "Ethereum", "ETH");
+INSERT INTO coins (created_at, updated_at, name, abbreviation) VALUES (now(), now(), "Tether", "USDT");
+INSERT INTO coins (created_at, updated_at, name, abbreviation) VALUES (now(), now(), "BNB", "BNB");
+INSERT INTO coins (created_at, updated_at, name, abbreviation) VALUES (now(), now(), "Solana", "SOL");
+INSERT INTO coins (created_at, updated_at, name, abbreviation) VALUES (now(), now(), "XRP", "XRP);

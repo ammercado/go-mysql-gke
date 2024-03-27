@@ -7,11 +7,11 @@ import (
 	"net/http"
 )
 
-func GetSongHandler(w http.ResponseWriter, r *http.Request) {
+func GetCoinHandler(w http.ResponseWriter, r *http.Request) {
 	log.Print("GET /api/v1/crypto")
 
-	// get songs
-	songs, err := cryptoapp.GetAllSongs(gcfg)
+	// get coins
+	coins, err := cryptoapp.GetAllCoins(gcfg)
 	if err != nil {
 		log.Print("GET crypto api failed", err.Error())
 		w.Write([]byte("Error getting crypto!"))
@@ -19,17 +19,17 @@ func GetSongHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// response
-	json.NewEncoder(w).Encode(songs)
+	json.NewEncoder(w).Encode(coins)
 }
 
-func PostSongHandler(w http.ResponseWriter, r *http.Request) {
+func PostCoinHandler(w http.ResponseWriter, r *http.Request) {
 	log.Print("POST /api/v1/crypto")
 
-	// post songs
-	newsong := cryptoapp.Song{}
-	json.NewDecoder(r.Body).Decode(&newsong)
+	// post cons
+	newcoin := cryptoapp.Coin{}
+	json.NewDecoder(r.Body).Decode(&newcoin)
 
-	err := cryptoapp.PostSong(gcfg, &newsong)
+	err := cryptoapp.PostCoin(gcfg, &newcoin)
 	if err != nil {
 		log.Print("POST crypto api failed", err.Error())
 		w.Write([]byte("Error posting crypto !"))

@@ -2,8 +2,8 @@ package cryptoapp
 
 import "gorm.io/gorm"
 
-type Song struct {
+type Coin struct {
 	gorm.Model
 	Name   string `json:"name"`
-	Artist string `json:"artist"`
+	Abbreviation string `json:"artist"`
 }
